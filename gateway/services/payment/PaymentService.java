@@ -1,5 +1,6 @@
-package com.apoiacafe.paypamentsapi.gateway.services;
+package com.apoiacafe.paypamentsapi.gateway.services.payment;
 
+import com.apoiacafe.paypamentsapi.client.model.payment.Payment;
 import com.apoiacafe.paypamentsapi.client.model.payment.request.PaymentRequest;
 import com.apoiacafe.paypamentsapi.core.managers.PaymentManager;
 import jakarta.transaction.Transactional;
@@ -15,7 +16,12 @@ public class PaymentService {
     }
 
     @Transactional
-    public String payment(PaymentRequest paymentRequest){
-        return manager.payment(paymentRequest);
+    public Payment payment(PaymentRequest paymentRequest){
+        return manager.createPayment(paymentRequest);
+    }
+
+    @Transactional
+    public Payment findPaymentById(int id) {
+        return manager.findPaymentById(id);
     }
 }
