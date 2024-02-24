@@ -24,4 +24,9 @@ public class PaymentService {
     public Payment findPaymentById(int id) {
         return manager.findPaymentById(id);
     }
+
+    @Transactional
+    public Payment putPayment(int id, PaymentRequest paymentRequest) {
+        return manager.putPayment(id, paymentRequest);
+    }
 }

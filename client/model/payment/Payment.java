@@ -1,12 +1,9 @@
 package com.apoiacafe.paypamentsapi.client.model.payment;
 
-import com.apoiacafe.paypamentsapi.api.objects.PaymentMethod;
+import com.apoiacafe.paypamentsapi.client.model.payment.request.PaymentMethod;
 import com.apoiacafe.paypamentsapi.client.model.payer.Client;
 import com.apoiacafe.paypamentsapi.client.response.PointOfInteraction;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
 
 import java.math.BigDecimal;
 

@@ -1,4 +1,4 @@
-package com.apoiacafe.paypamentsapi.api.objects;
+package com.apoiacafe.paypamentsapi.client.model.payment.request;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

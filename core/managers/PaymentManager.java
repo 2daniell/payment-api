@@ -16,7 +16,7 @@ public class PaymentManager implements PaymentFunctions {
     }
 
     public Payment createPayment(PaymentRequest paymentRequest) {
-        return restClient.post().uri("/v1/payments").header("X-Idempotency-Key", paymentRequest.payer().getId()).body(paymentRequest).retrieve().body(Payment.class);
+        return restClient.post().uri("/v1/payments").header("X-Idempotency-Key", paymentRequest.payer().id()).body(paymentRequest).retrieve().body(Payment.class);
     }
 
     public Payment findPaymentById(int id) {
@@ -24,7 +24,7 @@ public class PaymentManager implements PaymentFunctions {
     }
 
     @Override
-    public Payment putPayment(int id) {
-        return null;
+    public Payment putPayment(int id, PaymentRequest paymentRequest) {
+        return restClient.put().uri("v1/payments/{id}", id).body(paymentRequest).retrieve().body(Payment.class);
     }
 }

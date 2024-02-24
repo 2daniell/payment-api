@@ -7,5 +7,5 @@ public interface PaymentFunctions {
 
     Payment createPayment(PaymentRequest paymentRequest);
     Payment findPaymentById(int id);
-    Payment putPayment(int id);
+    Payment putPayment(int id, PaymentRequest paymentRequest);
 }
