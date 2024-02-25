@@ -17,8 +17,8 @@ public class ClientManager implements ClientFunctions {
 
 
     @Override
-    public String createClient(ClientRequest clientRequest) {
-        return restClient.post().uri("/v1/customers").body(clientRequest).retrieve().body(String.class);
+    public Client createClient(ClientRequest clientRequest) {
+        return restClient.post().uri("/v1/customers").body(clientRequest).retrieve().body(Client.class);
     }
 
     @Override

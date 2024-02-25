@@ -5,7 +5,7 @@ import com.apoiacafe.paypamentsapi.client.model.payer.request.ClientRequest;
 
 public interface ClientFunctions {
 
-    String createClient(ClientRequest clientRequest);
+    Client createClient(ClientRequest clientRequest);
     Client findClientByEmail(String email);
     Client findClientById(String id);
     Client putClient(String id, ClientRequest clientRequest);

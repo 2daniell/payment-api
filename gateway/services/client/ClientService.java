@@ -16,7 +16,7 @@ public class ClientService {
         this.manager = manager;
     }
 
-    public String createClient(ClientRequest clientRequest) {
+    public Client createClient(ClientRequest clientRequest) {
         return manager.createClient(clientRequest);
     }
 
